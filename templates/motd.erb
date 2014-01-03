@@ -1,0 +1,12 @@
+
+Server Information:
+    Hostname          : <%= @fqdn %>
+    IP Address        : <%= @ipaddress %>
+    Distribution      : <%= @operatingsystem %> <%= @operatingsystemrelease %>
+    Total Memory      : <%= @memorysize %>
+
+    Puppet Classes:
+<% classes.each do |klass| -%>
+        <%= klass %>
+<% end -%>
+
