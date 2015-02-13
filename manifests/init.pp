@@ -16,12 +16,13 @@
 # Bitlancer LLC (contact@bitlancer.com)
 #
 class motd (
-  $motd = '/etc/motd',
+  $motd     = '/etc/motd',
+  $template = 'motd/motd.erb'
 ) {
   file { $motd:
     owner => root,
     group => root,
-    content => template('motd/motd.erb'),
+    content => template($template),
     ensure => present,
   }
 }
